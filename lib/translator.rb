@@ -14,6 +14,7 @@ return result
 end
 
 def get_japanese_emoticon(file_path,emote)
+  result = ""
 emojis = load_library(file_path)
 
 emojis.each do |meaning,emotes|
