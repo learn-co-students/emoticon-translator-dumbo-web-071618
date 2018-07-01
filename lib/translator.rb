@@ -18,11 +18,13 @@ sorry_message =  "Sorry, that emoticon was not found"
 emojis = load_library(file_path)
 
 emojis.each do |meaning,emotes|
-  puts emotes
+  #puts emotes
   if emotes[0] == emote
     sorry_message = emotes[1]
   end
 end
+puts emojis
+
 sorry_message
 end
 
