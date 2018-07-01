@@ -35,11 +35,10 @@ def get_english_meaning(file_path,emote)
 
 emojis.each do |get_meaning ,get_emoticon|
   get_emoticon.each do |x,y|
-    if x == emote
-      return y
-    end
+      if x == emote
+        return y
+      end
+  end
 end
-end
-
 sorry_message
 end
