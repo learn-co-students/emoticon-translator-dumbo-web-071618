@@ -22,7 +22,7 @@ emojis.each do |meaning,emotes|
     return emotes[1]
   end
 end
-
+sorry_message
 end
 
 def get_english_meaning
