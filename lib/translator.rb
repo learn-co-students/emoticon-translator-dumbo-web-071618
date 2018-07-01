@@ -23,6 +23,7 @@ emojis.each do |get_meaning,get_emoticon|
       return y
     end
 end
+end
 
 sorry_message
 end
