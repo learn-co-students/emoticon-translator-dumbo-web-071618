@@ -19,11 +19,8 @@ emojis = load_library(file_path)
 
 emojis.each do |get_meaning,get_emoticon|
   #puts emotes
-  if emotes[0] == emote
-    sorry_message = emotes[1]
-  end
+  return get_emoticon[emote]
 end
-puts emojis
 
 sorry_message
 end
