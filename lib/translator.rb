@@ -29,6 +29,8 @@ sorry_message
 end
 
 def get_english_meaning(file_path,emote)
+  sorry_message =  "Sorry, that emoticon was not found"
+
   emojis = load_library(file_path)
 
 emojis.each do |get_meaning ,get_emoticon|
