@@ -14,14 +14,15 @@ return result
 end
 
 def get_japanese_emoticon(file_path,emote)
-  result = ""
+  result =  "Sorry, that emoticon was not found"
 emojis = load_library(file_path)
 
 emojis.each do |meaning,emotes|
   if emotes[0] == emote
-    return emotes[1]
+    result = emotes[1]
 end
 
+return result
 end
 
 def get_english_meaning
