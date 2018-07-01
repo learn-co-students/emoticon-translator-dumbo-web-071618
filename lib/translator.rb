@@ -13,9 +13,9 @@ return result
 
 end
 
-def get_japanese_emoticon(file_path)
-emoticon_hash = load_library("./lib/emoticons.yml")
-
+def get_japanese_emoticon(file_path,emote)
+emoticon_hash = load_library(file_path)
+emoticon_hash
 
 end
 
