@@ -19,7 +19,7 @@ emojis = load_library(file_path)
 
 emojis.each do |meaning,emotes|
   if emotes[0] == emote
-    result = emotes[1]
+    return emotes[1]
   end
 end
 return result
