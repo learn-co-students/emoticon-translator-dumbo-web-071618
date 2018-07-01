@@ -17,7 +17,7 @@ def get_japanese_emoticon(file_path,emote)
 sorry_message =  "Sorry, that emoticon was not found"
 emojis = load_library(file_path)
 
-emojis.each do |meaning,emotes|
+emojis.each do |get_meaning,get_emoticon|
   #puts emotes
   if emotes[0] == emote
     sorry_message = emotes[1]
