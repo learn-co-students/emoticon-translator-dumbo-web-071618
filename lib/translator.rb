@@ -17,10 +17,8 @@ def get_japanese_emoticon(file_path,emote)
 emojis = load_library(file_path)
 
 emojis.each do |meaning,emotes|
-  if 
- get_emoticon[emotes[1]] = meaning
-
- get_meaning[emotes[0]] = emotes[1]
+  if emotes[0] == emote
+    return emotes[1]
 end
 
 end
