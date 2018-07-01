@@ -34,7 +34,7 @@ def get_english_meaning(file_path,emote)
   emojis = load_library(file_path)
 
 emojis.each do |get_meaning ,get_emoticon|
-  get_meaning.each do |x,y|
+  get_emoticon.each do |x,y|
     if x == emote
       return y
     end
