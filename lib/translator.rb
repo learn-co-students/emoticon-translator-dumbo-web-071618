@@ -1,11 +1,12 @@
 require "yaml"
 require 'pry'
 
-path = 'lib/emoticons.yml'
+path = YAML.load_file('lib/emoticons.yml')
 
 def load_library(path)
-  emoticons =  YAML.load_file(path)
+  emoticons =  path
   translations = {"get_meaning" => {},"get_emoticon" => {} } 
+  binding.pry
   translations.each do |keys,values|
     path.each do |text,emotes|
       if keys == "get_meaning"
@@ -18,7 +19,7 @@ def load_library(path)
   translations
 end
 
-def get_japanese_emoticon path,emoticon 
+def get_japanese_emoticon path,*emoticon 
   emoticon_hash = load_library path
   emoticon_hash["get_emoticon"].each do |eng,jap|
     if emoticon == eng 
@@ -31,6 +32,6 @@ def get_english_meaning
   # code goes here
 end
 
-load_library('lib/emoticons.yml')
+load_library(path)
 
-puts get_japanese_emoticon path,":)"
+puts get_japanese_emoticon path,[":)",":'(","=D"]
